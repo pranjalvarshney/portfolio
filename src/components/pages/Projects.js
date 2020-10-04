@@ -1,11 +1,6 @@
-import React from "react"
+import React from 'react'
+import './Projects.css'
 
 export const Projects = () => {
-  return (
-    <div>
-      <div className='wrapper' style={{ background: "red" }}>
-        Projects
-      </div>
-    </div>
-  )
+  return <div className='project'></div>
 }
