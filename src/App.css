@@ -1,7 +1,9 @@
 .app {
   position: relative;
-  display: grid;
-  height: 100vh;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
   background: black;
 }
 .wrapper {

@@ -1,34 +1,22 @@
-import React from "react"
-import "./Contact.css"
+import React from 'react'
+import './Contact.css'
 
 export const Contact = () => {
   return (
-    <div className='contact'>
-      <div className='terminal'>
-        <div className='terminal-header'>
-          <div className='terminal-header-options'>
-            <div
-              className='terminal-option-btn'
-              style={{ background: "red" }}
-            ></div>
-            <div
-              className='terminal-option-btn'
-              style={{ background: "orange" }}
-            ></div>
-            <div
-              className='terminal-option-btn'
-              style={{ background: "green" }}
-            ></div>
-          </div>
-          <div className='terminal-title'>Contact</div>
+    <div className='contact' id='contact'>
+      <h1 className='heading'>Contact</h1>
+      <h4 className='tag-contact'>Have a question or want to work together?</h4>
+      <form>
+        <div className='form-group'>
+          <input className='input-control' placeholder='Enter name' />
+          <input className='input-control' placeholder='Enter email' />
+          <textarea
+            className='input-control'
+            placeholder='Enter your message'
+          />
+          <button className='btn-submit'>Submit</button>
         </div>
-        <div className='terminal-body'>
-          <div className='body-date-line'>
-            Current login :{" "}
-            <span className='data-console'> {new Date().toUTCString()}</span>
-          </div>
-        </div>
-      </div>
+      </form>
     </div>
   )
 }
