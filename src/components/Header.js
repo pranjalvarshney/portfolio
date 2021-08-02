@@ -1,23 +1,28 @@
-import React from 'react'
-import { Link } from 'react-scroll'
-import './Header.css'
-import { Avatar } from '@material-ui/core'
-import { IconButton } from '@material-ui/core'
+import React from "react";
+import { Link } from "react-scroll";
+import "./Header.css";
+import { Avatar } from "@material-ui/core";
+import { IconButton } from "@material-ui/core";
 
 export const Header = () => {
   return (
-    <div className='header'>
-      <div className='header-wrapper'>
-        <div className='avatar-header'>
+    <div className="header">
+      <div className="header-wrapper">
+        <div
+          className="avatar-header"
+          onClick={() => {
+            window.location.replace("/");
+          }}
+        >
           <IconButton>
-            <Avatar src='https://avatars3.githubusercontent.com/u/36803450?s=460&v=4' />
+            <Avatar src="profile-pic.png" />
           </IconButton>
           <h6>Pranjal Varshney</h6>
         </div>
-        <ul className='header-list'>
-          <li className='header-li'>
+        <ul className="header-list">
+          <li className="header-li">
             <Link
-              to='main'
+              to="main"
               spy={true}
               smooth={true}
               hashSpy={true}
@@ -27,9 +32,9 @@ export const Header = () => {
               Home
             </Link>
           </li>
-          <li className='header-li'>
+          <li className="header-li">
             <Link
-              to='about'
+              to="about"
               spy={true}
               smooth={true}
               hashSpy={true}
@@ -39,9 +44,9 @@ export const Header = () => {
               About
             </Link>
           </li>
-          <li className='header-li'>
+          <li className="header-li">
             <Link
-              to='projects'
+              to="projects"
               spy={true}
               smooth={true}
               hashSpy={true}
@@ -51,7 +56,7 @@ export const Header = () => {
               Projects
             </Link>
           </li>
-          <li className='header-li'>
+          {/* <li className='header-li'>
             <Link
               to='blogs'
               spy={true}
@@ -62,10 +67,10 @@ export const Header = () => {
             >
               Blogs
             </Link>
-          </li>
-          <li className='header-li'>
+          </li> */}
+          <li className="header-li">
             <Link
-              to='contact'
+              to="contact"
               spy={true}
               smooth={true}
               hashSpy={true}
@@ -78,5 +83,5 @@ export const Header = () => {
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
