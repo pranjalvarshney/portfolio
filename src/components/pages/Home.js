@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
@@ -8,6 +8,19 @@ import SocialIconBar from "./SocialIconBar";
 export const Home = () => {
   const [isHover1, setIsHover1] = useState(false);
   const [isHover2, setIsHover2] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  //choose the screen size
+  const handleResize = () => {
+    if (window.innerWidth < 720) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+  });
   return (
     <div
       className="app wrapper"
@@ -67,7 +80,11 @@ export const Home = () => {
               </button>
             </div>
           </div>
-          <SocialIconBar horizontal={false} />
+          {isMobile ? (
+            <SocialIconBar horizontal={true} />
+          ) : (
+            <SocialIconBar horizontal={false} />
+          )}
         </div>
       </div>
     </div>
