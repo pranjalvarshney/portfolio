@@ -67,7 +67,7 @@ export const Home = () => {
               </button>
             </div>
           </div>
-          <SocialIconBar />
+          <SocialIconBar horizontal={false} />
         </div>
       </div>
     </div>

@@ -45,7 +45,7 @@ export const Contact = () => {
             Hire me!
           </Button>
         </Card>
-        <SocialIconBar horizontal="yes" />
+        <SocialIconBar horizontal={true} />
       </div>
     </>
   );
